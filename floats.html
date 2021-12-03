@@ -9,18 +9,65 @@
     <style>
         header,
         footer,
-        nav {
+        nav,
+        aside {
             width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            background-color: white;
+            z-index:999;
+        }
+
+        header {
+            top: 0;
+            /*
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            background-color: white;
+            */
+        }
+
+        nav {
+            top: 75px;
+            /*
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            background-color: white;
+            */
+
+        }
+
+        footer {
+            bottom: 0;
+            /*
+            width: 100%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            background-color: white;
+            */
+
         }
 
         aside {
             width: 25%;
-            float: left;
+            top:150px;
+            left:0;
+            right:unset;
         }
 
         main {
-            float: left;
+            float: right;
             width: 75%;
+            top:150px;
+            right:0;
+            position:relative;
+            padding-bottom:100px;
         }
 
         header h1 {
@@ -36,6 +83,10 @@
             border: 1px solid black;
             float: left;
             width: 20%;
+            margin: 1rem;
+            padding:1rem;
+            height: 700px;
+            overflow: hidden;
         }
     </style>
 </head>

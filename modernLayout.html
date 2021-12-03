@@ -17,14 +17,19 @@
         body {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 100px 50px 1fr 50px;
+            grid-template-rows: auto auto auto  auto;
             gap: 1rem 1rem;
             grid-template-areas:
                 "header"
                 "nav"
                 "main"
                 "footer";
+        }
 
+        header,
+        nav,
+        footer {
+            text-align: center;
         }
 
         header {
@@ -42,6 +47,8 @@
 
         main {
             grid-area: main;
+            max-height: calc(100vh - 250px);
+            overflow: auto;
         }
 
         footer {
@@ -50,14 +57,12 @@
 
         @media(min-width:768px) {
             body {
-                /*display:grid;*/
-                grid-template-columns: 25% 75%;
+                grid-template-columns: auto 1fr;
                 grid-template-areas:
                     "header header"
                     "nav nav"
                     "aside main"
                     "footer footer";
-                /*grid-template-rows: 50px 25px 1fr 25px;*/
             }
 
             aside {
@@ -69,12 +74,17 @@
 
         .flexbox {
             display: flex;
-            /*flex-wrap:wrap;*/
+            flex-wrap:wrap;
             gap: 1rem;
         }
-        article{
-            width: 30%;
+
+        article {
+            flex: 1 1  30%;
         }
+        article:nth-child(3){
+            /*flex:3 0 100%;*/
+        }
+
     </style>
 </head>
 
