@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern responsive layouts</title>
+    <style>
+        html,
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 50px 1fr 50px;
+            gap: 1rem 1rem;
+            grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "footer";
+
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: aside;
+            display: none;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        @media(min-width:768px) {
+            body {
+                /*display:grid;*/
+                grid-template-columns: 25% 75%;
+                grid-template-areas:
+                    "header header"
+                    "nav nav"
+                    "aside main"
+                    "footer footer";
+                /*grid-template-rows: 50px 25px 1fr 25px;*/
+            }
+
+            aside {
+                display: block;
+            }
+        }
+
+
+
+        .flexbox {
+            display: flex;
+            /*flex-wrap:wrap;*/
+            gap: 1rem;
+        }
+        article{
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Modern responsive layouts</h1>
+    </header>
+    <nav>
+        <p>
+            <a href="index.html">Back</a>
+        </p>
+    </nav>
+    <aside>
+        <h2>SIDEBAR</h2>
+    </aside>
+    <main>
+        <h2>MAIN</h2>
+        <section class="flexbox">
+            <article>
+                <h3>1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat, erat vitae
+                    sollicitudin
+                    placerat, erat purus ultricies ex, non ultricies magna ex eu purus. Sed eget purus urna. Donec
+                    ornare,
+                    dui vitae mollis finibus, ex elit egestas dolor, lobortis faucibus tellus orci tristique dui. Proin
+                    auctor arcu dolor, at luctus neque dictum vel. Phasellus tincidunt varius blandit. Pellentesque a
+                    cursus
+                    purus, eu placerat dui. Donec erat ipsum, sagittis sed dictum id, rhoncus vitae augue. Pellentesque
+                    eu
+                    nulla nec mauris congue sodales. Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada
+                    fames ac turpis egestas. Pellentesque rutrum non metus at pulvinar.</p>
+
+            </article>
+            <article>
+                <h3>2</h3>
+                <p>Nulla non volutpat nisi. Vivamus elit nisl, hendrerit id semper non, faucibus sed sapien. Aenean erat
+                    metus,
+                    malesuada id leo ac, pulvinar rutrum ipsum. Ut quis neque mattis metus venenatis accumsan sit amet
+                    ac
+                    justo.
+                    Aliquam erat volutpat. Pellentesque mauris turpis, fermentum quis nisl ac, porta tempus enim. Duis
+                    id
+                    dictum
+                    elit. Aenean id lectus quis velit ultricies imperdiet ac id ante. Nam sodales lectus tempus, feugiat
+                    sapien
+                    a, hendrerit nibh. Cras a libero euismod, varius nisi et, porttitor mi. Etiam molestie nisl orci, ac
+                    vestibulum tortor blandit sed. Sed pellentesque at tellus at volutpat. Donec dolor nulla, auctor ut
+                    massa
+                    nec, blandit varius nulla. Maecenas nec lorem massa. In non varius diam. Curabitur felis nisl,
+                    dapibus
+                    nec
+                    ornare at, cursus at ex.</p>
+
+            </article>
+            <article>
+                <h3>3</h3>
+                <p>Maecenas mollis purus vitae dui finibus vehicula. Morbi quis nibh vel neque mollis convallis. Morbi
+                    volutpat lectus eu augue volutpat, ut congue quam posuere. Duis justo dolor, tristique et gravida
+                    et,
+                    eleifend vel elit. Aliquam malesuada sollicitudin fringilla. Donec non tempus nisl. Ut consectetur
+                    lacus
+                    neque. Phasellus nec lobortis ipsum, in venenatis nunc. Nunc metus orci, tincidunt a arcu hendrerit,
+                    vestibulum pharetra magna. Maecenas gravida nibh sed lorem facilisis, sit amet efficitur urna
+                    tristique.
+                    Sed ullamcorper elementum erat convallis posuere.</p>
+
+            </article>
+            <article>
+                <h4>4</h4>
+                <p>Integer in justo erat. Quisque tempor diam in quam dictum, volutpat sollicitudin velit posuere. Nulla
+                    sem
+                    dui, fermentum quis lacinia quis, vulputate non risus. Mauris lacinia vulputate erat eu porttitor.
+                    Praesent pretium orci at nulla interdum, ut auctor dolor bibendum. Donec malesuada mi sollicitudin,
+                    facilisis orci sed, finibus lectus. Duis maximus sapien non velit dignissim, sed iaculis mauris
+                    dignissim. Etiam at rhoncus nunc, posuere feugiat nibh.</p>
+
+            </article>
+            <article>
+                <h4>5</h4>
+                <p>Nulla mattis nibh quis odio porta euismod. Curabitur maximus viverra ultrices. Etiam iaculis vel
+                    magna eu
+                    semper. Praesent luctus neque id efficitur placerat. Aliquam id semper velit. Phasellus vel purus
+                    vel
+                    est vulputate fringilla nec commodo tellus. Integer ornare lorem sed eleifend venenatis. Quisque
+                    ultrices fringilla mi. Proin vitae mauris at dui lobortis fermentum. Praesent consequat eleifend
+                    felis
+                    ac gravida. Duis eu nulla ex. Etiam sed nisl ac justo interdum mattis et vel tortor. Duis faucibus,
+                    dolor nec tempor porttitor, ipsum arcu viverra lacus, fringilla pellentesque enim quam vitae lectus.
+                    Nulla quis placerat est.</p>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
+
+</html>
